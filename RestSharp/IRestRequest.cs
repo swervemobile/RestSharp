@@ -17,6 +17,7 @@
 using System;
 using System.Collections.Generic;
 using System.Net;
+using System.Net.Cache;
 using RestSharp.Serializers;
 
 namespace RestSharp
@@ -106,6 +107,11 @@ namespace RestSharp
 		/// Useful when using Asynchronous Execution with Callbacks
 		/// </remarks>
 		int Attempts { get; }
+
+		/// <summary>
+		/// Cache policy to be used for this request.
+		/// </summary>
+		RequestCachePolicy RequestCachePolicy { get; set; }
 
 #if FRAMEWORK
 		/// <summary>

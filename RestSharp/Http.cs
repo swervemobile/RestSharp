@@ -19,6 +19,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Net;
+using System.Net.Cache;
 using System.Text;
 using System.Security.Cryptography.X509Certificates;
 using RestSharp.Extensions;
@@ -150,6 +151,10 @@ namespace RestSharp
 		/// URL to call for this request
 		/// </summary>
 		public Uri Url { get; set; }
+		/// <summary>
+		/// Cache policy to be used for this request.
+		/// </summary>
+		public RequestCachePolicy RequestCachePolicy { get; set; }
 
 #if FRAMEWORK
 		/// <summary>

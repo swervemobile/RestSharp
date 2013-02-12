@@ -375,6 +375,8 @@ namespace RestSharp
 				http.RequestBody = body.Value.ToString();
 				http.RequestContentType = body.Name;
 			}
+
+			http.RequestCachePolicy = request.RequestCachePolicy;
 		}
 
 		private RestResponse ConvertToRestResponse(IRestRequest request, HttpResponse httpResponse)
