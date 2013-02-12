@@ -250,6 +250,8 @@ namespace RestSharp
 				webRequest.MaximumAutomaticRedirections = MaxRedirects.Value; 
 			}
 
+			webRequest.CachePolicy = RequestCachePolicy;
+
 			return webRequest;
 		}
 	}

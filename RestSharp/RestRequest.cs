@@ -19,6 +19,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Net;
+using System.Net.Cache;
 using RestSharp.Extensions;
 using RestSharp.Serializers;
 
@@ -40,6 +41,11 @@ namespace RestSharp
 		/// By default the included XmlSerializer is used.
 		/// </summary>
 		public ISerializer XmlSerializer { get; set; }
+
+		/// <summary>
+		/// Cache policy to be used for this request.
+		/// </summary>
+		public RequestCachePolicy RequestCachePolicy { get; set; }
 
 		/// <summary>
 		/// Default constructor

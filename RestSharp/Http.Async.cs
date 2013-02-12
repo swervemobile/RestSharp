@@ -416,6 +416,8 @@ namespace RestSharp
 #if !SILVERLIGHT
 			webRequest.AllowAutoRedirect = FollowRedirects;
 #endif
+			webRequest.CachePolicy = RequestCachePolicy;
+
 			return webRequest;
 		}
 

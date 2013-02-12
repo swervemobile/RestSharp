@@ -17,6 +17,7 @@
 using System;
 using System.Collections.Generic;
 using System.Net;
+using System.Net.Cache;
 using System.IO;
 using System.Security.Cryptography.X509Certificates;
 
@@ -25,6 +26,10 @@ namespace RestSharp
 	public interface IHttp
 	{
 		CookieContainer CookieContainer { get; set; }
+		/// <summary>
+		/// Cache policy to be used for this request.
+		/// </summary>
+		RequestCachePolicy RequestCachePolicy { get; set; }
 		ICredentials Credentials { get; set; }
 		string UserAgent { get; set; }
 		int Timeout { get; set; }
